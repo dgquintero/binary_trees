@@ -1,6 +1,6 @@
 #include "binary_trees.h"
 /**
- * binary_tree_is_full - function that checks if a binary tree is full
+ * binary_tree_is_perfect - function that checks if a binary tree is full
  * @tree : is a pointer to the root
  * Return: 1 if is full 0 if is not.
  */
@@ -14,7 +14,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 		left_full += binary_tree_is_perfect(tree->left);
 	if (tree->right)
 		right_full += binary_tree_is_perfect(tree->right);
-	if ((left_full + right_full) % 2 == 0)
+	if (left_full == right_full)
 		return (1);
 	return (0);
 }
