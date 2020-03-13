@@ -12,7 +12,7 @@ size_t binary_tree_leaves(const binary_tree_t *tree)
 	return (0);
 	lv += binary_tree_leaves(tree->left);
 	lv += binary_tree_leaves(tree->right);
-    if (tree->left == NULL && tree->right == NULL)
-        lv++;
-    return (lv);
+	if (tree->left == NULL && tree->right == NULL)
+		lv++;
+	return (lv);
 }
